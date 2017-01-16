@@ -1,0 +1,35 @@
+{
+  "name": "Blogv2",
+  "version": "1.0.0",
+  "description": "The Second Trails To Establish A Blog",
+  "main": "index.js",
+  "dependencies": {
+    "config-lite": "^1.5.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^1.3.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "express-formidable": "^1.0.0",
+    "express-session": "^1.14.2",
+    "express-winston": "^2.1.2",
+    "marked": "^0.3.6",
+    "moment": "^2.17.1",
+    "mongolass": "^2.4.1",
+    "objectid-to-timestamp": "^1.3.0",
+    "sha1": "^1.1.1",
+    "winston": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "supervisor --harmony index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "ejs",
+    "mongodb",
+    "express"
+  ],
+  "author": "xuchao",
+  "license": "MIT"
+}

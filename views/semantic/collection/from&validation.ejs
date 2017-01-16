@@ -1,0 +1,630 @@
+<div class="ui segment blue">
+    <form class="ui form segment teal" id="from1">
+        <div class="field">
+            <label>First Name</label>
+            <input type="text" name="first-name" placeholder="First Name">
+        </div>
+        <div class="field">
+            <label>Last Name</label>
+            <input type="text" name="last-name" placeholder="Last Name">
+        </div>
+        <div class="field">
+            <div class="ui checkbox">
+                <input type="checkbox" tabindex="0" class="hidden">
+                <label>I agree to the Terms and Conditions</label>
+            </div>
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+    </form>
+    <div class="ui horizontal divider">or</div>
+    <form class="ui form segment teal" id="from2">
+        <p>Tell Us About Yourself</p>
+        <div class="two fields">
+            <div class="field">
+                <label>Name</label>
+                <input placeholder="First Name" name="name" type="text">
+            </div>
+            <div class="field">
+                <label>Gender</label>
+                <select class="ui dropdown" name="gender">
+                    <option value="">Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+        </div>
+        <div class="two fields">
+            <div class="field">
+                <label>Username</label>
+                <input placeholder="Username" name="username" type="text">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="password">
+            </div>
+        </div>
+        <div class="field">
+            <label>Skills</label>
+            <select name="skills" multiple="" class="ui dropdown">
+                <option value="">Select Skills</option>
+                <option value="css">CSS</option>
+                <option value="html">HTML</option>
+                <option value="javascript">Javascript</option>
+                <option value="design">Graphic Design</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="mech">Mechanical Engineering</option>
+                <option value="repair">Kitchen Repair</option>
+            </select>
+        </div>
+        <div class="inline field">
+            <div class="ui checkbox">
+                <input type="checkbox" name="terms">
+                <label>I agree to the terms and conditions</label>
+            </div>
+        </div>
+        <div class="ui primary submit button">Submit</div>
+        <div class="ui error message"></div>
+    </form>
+    <div class="ui horizontal divider">or</div>
+    <form class="ui form segment teal" id="from3">
+        <div class="field">
+            <label>Empty</label>
+            <input name="empty" type="text">
+        </div>
+        <div class="field">
+            <label>Dropdown</label>
+            <select class="ui dropdown" name="dropdown">
+                <option value="">Select</option>
+                <option value="male">Choice 1</option>
+                <option value="female">Choice 2</option>
+            </select>
+        </div>
+        <div class="inline field">
+            <div class="ui checkbox">
+                <input type="checkbox" name="checkbox">
+                <label>Checkbox</label>
+            </div>
+        </div>
+        <div class="ui submit button">Submit</div>
+        <div class="ui error message"></div>
+    </form>
+    <div class="ui horizontal divider">or</div>
+    <form class="ui form error segment teal" id="from4">
+        <div class="two fields">
+            <div class="field error">
+                <label>Integer</label>
+                <input name="integer" type="text" value="101">
+            </div>
+            <div class="field">
+                <label>E-mail</label>
+                <input name="email" type="text" value="jack@foo">
+            </div>
+        </div>
+        <div class="two fields">
+            <div class="field">
+                <label>Decimal</label>
+                <input name="decimal" type="text" value="1.1.1">
+            </div>
+            <div class="field error">
+                <label>Number</label>
+                <input name="number" type="text" value="+200">
+            </div>
+        </div>
+        <div class="two fields">
+            <div class="field error">
+                <label>URL</label>
+                <input name="url" type="text" value="ww.fakeurl.com">
+            </div>
+            <div class="field error">
+                <label>RegEx</label>
+                <input name="regex" type="text" value="joe">
+            </div>
+        </div>
+        <div class="ui submit button">Submit</div>
+        <div class="ui error message"><ul class="list"><li>Please enter an integer value</li><li>Please enter a valid number</li><li>Please enter a url</li><li>Please enter a 4-16 letter username</li></ul></div>
+    </form>
+    <div class="ui horizontal divider">or</div>
+    <form class="ui form segment error teal" id="form5">
+        <div class="two fields">
+            <div class="field error">
+                <label>Credit Card</label>
+                <input name="card" type="text" value="4444444444444444">
+            </div>
+            <div class="field error">
+                <label>Certain Type</label>
+                <input name="exact-card" type="text" value="4444444444444444">
+            </div>
+        </div>
+        <div class="ui submit button">Submit</div>
+        <!--<div class="ui error message"><ul class="list"><li>Please enter a valid credit card</li><li>Please enter a visa or amex card</li></ul></div>-->
+    </form>
+    <div class="ui horizontal divider">or</div>
+    <form class="ui form error segment teal" id="form6">
+        <div class="two fields">
+            <div class="field">
+                <label>Match 1</label>
+                <input name="match1" type="text" value="same">
+            </div>
+            <div class="field error">
+                <label>Match 2</label>
+                <input name="match2" type="text" value="different">
+            </div>
+        </div>
+        <div class="two fields">
+            <div class="field">
+                <label>Different 1</label>
+                <input name="different1" type="text" value="same">
+            </div>
+            <div class="field error">
+                <label>Different 2</label>
+                <input name="different2" type="text" value="same">
+            </div>
+        </div>
+        <div class="ui submit button">Submit</div>
+        <div class="ui error message"><ul class="list"><li>Please put the same value in both fields</li><li>Please put different values for each field</li></ul></div>
+    </form>
+    <div class="ui horizontal divider">or</div>
+    <form class="ui form segment teal" id="form7">
+        <div class="field">
+            <label>minLength</label>
+            <textarea name="minLength" cols="5"></textarea>
+        </div>
+        <div class="field">
+            <label>Exact Length</label>
+            <input name="exactLength" type="text" value="12345">
+        </div>
+        <div class="field">
+            <label>maxLength</label>
+            <textarea name="maxLength" cols="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla metus leo, scelerisque quis pretium non, ultricies in dolor. Vivamus pulvinar odio at nisl egestas tempor. Quisque nec diam gravida, convallis massa et, aliquam purus. Nunc eget aliquet leo. Morbi sodales mi placerat volutpat rhoncus. Pellentesque sed leo eu risus rutrum suscipit ut dapibus est. Curabitur lacus diam, viverra mollis purus ut, facilisis consectetur dui. Etiam molestie suscipit ligula, vitae lacinia mi tempor ac. Pellentesque accumsan porttitor nisi. Sed ac metus ac arcu feugiat posuere. Curabitur eget pharetra felis. Donec consectetur felis sed iaculis vulputate. Sed mollis ultrices consequat.</textarea>
+        </div>
+        <div class="ui submit button">Submit</div>
+        <div class="ui error message"></div>
+    </form>
+    <div class="ui horizontal divider">or</div>
+    <form class="ui form segment teal" id="form8">
+        <div class="two fields">
+            <div class="field">
+                <label>is</label>
+                <input name="is" type="text" value="dogs">
+            </div>
+            <div class="field">
+                <label>isExactly</label>
+                <input name="isExactly" type="text" value="Dog">
+            </div>
+        </div>
+        <div class="two fields">
+            <div class="field">
+                <label>not</label>
+                <input name="not" type="text" value="Dog">
+            </div>
+            <div class="field">
+                <label>notExactly</label>
+                <input name="notExactly" type="text" value="dog">
+            </div>
+        </div>
+        <div class="two fields">
+            <div class="field">
+                <label>contains</label>
+                <input name="contains" type="text" value="poodle">
+            </div>
+            <div class="field">
+                <label>containsExactly</label>
+                <input name="containsExactly" type="text" value="Dogbert">
+            </div>
+        </div>
+        <div class="two fields">
+            <div class="field">
+                <label>doesntContain</label>
+                <input name="doesntContain" type="text" value="Dogtown">
+            </div>
+            <div class="field">
+                <label>doesntContainExactly</label>
+                <input name="doesntContainExactly" type="text" value="dognapper">
+            </div>
+        </div>
+        <div class="ui submit button">Submit</div>
+        <div class="ui error message"></div>
+    </form>
+    <div class="ui horizontal divider">or</div>
+    <form class="ui form segment teal" id="form9">
+        <div class="three fields">
+            <div class="field">
+                <label>Exact Count</label>
+                <select name="exactCount" multiple="" class="ui dropdown">
+                    <option value="">Select Values</option>
+                    <option value="1" selected="">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Minimum Count</label>
+                <select name="minCount" multiple="" class="ui dropdown">
+                    <option value="">Select Values</option>
+                    <option value="1" selected="">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Maximum Count</label>
+                <select name="maxCount" multiple="" class="ui dropdown">
+                    <option value="">Select Values</option>
+                    <option value="1" selected="">1</option>
+                    <option value="2" selected="">2</option>
+                    <option value="3" selected="">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="ui submit button">Submit</div>
+        <div class="ui error message"></div>
+    </form>
+</div>
+<script>
+    $('#from2')
+        .form({
+            on:'change',
+            inline:'true',
+            duration:300,
+            fields: {
+                name: {
+                    identifier: 'name',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please enter your name'
+                        }
+                    ]
+                },
+                skills: {
+                    identifier: 'skills',
+                    rules: [
+                        {
+                            type: 'minCount[2]',
+                            prompt: 'Please select at least two skills'
+                        }
+                    ]
+                },
+                gender: {
+                    identifier: 'gender',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please select a gender'
+                        }
+                    ]
+                },
+                username: {
+                    identifier: 'username',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please enter a username'
+                        }
+                    ]
+                },
+                password: {
+                    identifier: 'password',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please enter a password'
+                        },
+                        {
+                            type: 'minLength[6]',
+                            prompt: 'Your password must be at least {ruleValue} characters'
+                        }
+                    ]
+                },
+                terms: {
+                    identifier: 'terms',
+                    rules: [
+                        {
+                            type: 'checked',
+                            prompt: 'You must agree to the terms and conditions'
+                        }
+                    ]
+                }
+            }
+        });
+
+    $('#from3')
+        .form({
+            on: 'blur',
+            fields: {
+                empty: {
+                    identifier: 'empty',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please enter a value'
+                        }
+                    ]
+                },
+                dropdown: {
+                    identifier: 'dropdown',
+                    rules: [
+                        {
+                            type: 'empty',
+                            prompt: 'Please select a dropdown value'
+                        }
+                    ]
+                },
+                checkbox: {
+                    identifier: 'checkbox',
+                    rules: [
+                        {
+                            type: 'checked',
+                            prompt: 'Please check the checkbox'
+                        }
+                    ]
+                }
+            }
+        });
+
+    $('#from4')
+        .form({
+            on: 'blur',
+            fields: {
+                integer: {
+                    identifier  : 'integer',
+                    rules: [
+                        {
+                            type   : 'integer[1..100]',
+                            prompt : 'Please enter an integer value'
+                        }
+                    ]
+                },
+                decimal: {
+                    identifier  : 'decimal',
+                    rules: [
+                        {
+                            type   : 'decimal',
+                            prompt : 'Please enter a valid decimal'
+                        }
+                    ]
+                },
+                number: {
+                    identifier  : 'number',
+                    rules: [
+                        {
+                            type   : 'number',
+                            prompt : 'Please enter a valid number'
+                        }
+                    ]
+                },
+                email: {
+                    identifier  : 'email',
+                    rules: [
+                        {
+                            type   : 'email',
+                            prompt : 'Please enter a valid e-mail'
+                        }
+                    ]
+                },
+                url: {
+                    identifier  : 'url',
+                    rules: [
+                        {
+                            type   : 'url',
+                            prompt : 'Please enter a url'
+                        }
+                    ]
+                },
+                regex: {
+                    identifier  : 'regex',
+                    rules: [
+                        {
+                            type   : 'regExp[/^[a-z0-9_-]{4,16}$/]',
+                            prompt : 'Please enter a 4-16 letter username'
+                        }
+                    ]
+                }
+            }
+        });
+
+    $('#form5')
+        .form({
+            on: 'blur',
+            inline:'true',
+            fields: {
+                card: {
+                    identifier  : 'card',
+                    rules: [
+                        {
+                            type   : 'creditCard',
+                            prompt : 'Please enter a valid credit card'
+                        }
+                    ]
+                },
+                exactCard: {
+                    identifier  : 'exact-card',
+                    rules: [
+                        {
+                            type   : 'creditCard[visa,amex]',
+                            prompt : 'Please enter a visa or amex card'
+                        }
+                    ]
+                }
+            }
+        });
+
+    $('#form6')
+        .form({
+            on: 'blur',
+            fields: {
+                match: {
+                    identifier  : 'match2',
+                    rules: [
+                        {
+                            type   : 'match[match1]',
+                            prompt : 'Please put the same value in both fields'
+                        }
+                    ]
+                },
+                different: {
+                    identifier  : 'different2',
+                    rules: [
+                        {
+                            type   : 'different[different1]',
+                            prompt : 'Please put different values for each field'
+                        }
+                    ]
+                }
+            }
+        });
+
+    $('#form7')
+        .form({
+            on: 'blur',
+            inline:'true',
+            fields: {
+                minLength: {
+                    identifier  : 'minLength',
+                    rules: [
+                        {
+                            type   : 'minLength[100]',
+                            prompt : 'Please enter at least 100 characters'
+                        }
+                    ]
+                },
+                exactLength: {
+                    identifier  : 'exactLength',
+                    rules: [
+                        {
+                            type   : 'exactLength[6]',
+                            prompt : 'Please enter exactly 6 characters'
+                        }
+                    ]
+                },
+                maxLength: {
+                    identifier  : 'maxLength',
+                    rules: [
+                        {
+                            type   : 'maxLength[100]',
+                            prompt : 'Please enter at most 100 characters'
+                        }
+                    ]
+                },
+            }
+        });
+
+    $('#form8')
+        .form({
+            on: 'blur',
+            fields: {
+                is: {
+                    identifier  : 'is',
+                    rules: [
+                        {
+                            type   : 'is[dog]',
+                            prompt : 'Please enter exactly "dog"'
+                        }
+                    ]
+                },
+                isExactly: {
+                    identifier  : 'isExactly',
+                    rules: [
+                        {
+                            type   : 'isExactly[dog]',
+                            prompt : 'Please enter exactly "dog"'
+                        }
+                    ]
+                },
+                not: {
+                    identifier  : 'not',
+                    rules: [
+                        {
+                            type   : 'not[dog]',
+                            prompt : 'Please enter a value, but not "dog"'
+                        }
+                    ]
+                },
+                notExactly: {
+                    identifier  : 'notExactly',
+                    rules: [
+                        {
+                            type   : 'notExactly[dog]',
+                            prompt : 'Please enter a value, but not exactly "dog"'
+                        }
+                    ]
+                },
+                contains: {
+                    identifier  : 'contains',
+                    rules: [
+                        {
+                            type   : 'contains[dog]',
+                            prompt : 'Please enter a value containing "dog"'
+                        }
+                    ]
+                },
+                containsExactly: {
+                    identifier  : 'containsExactly',
+                    rules: [
+                        {
+                            type   : 'containsExactly[dog]',
+                            prompt : 'Please enter a value containing exactly "dog"'
+                        }
+                    ]
+                },
+                doesntContain: {
+                    identifier  : 'doesntContain',
+                    rules: [
+                        {
+                            type   : 'doesntContain[dog]',
+                            prompt : 'Please enter a value not containing "dog"'
+                        }
+                    ]
+                },
+                doesntContainExactly: {
+                    identifier  : 'doesntContainExactly',
+                    rules: [
+                        {
+                            type   : 'doesntContainExactly[dog]',
+                            prompt : 'Please enter a value not containing exactly "dog"'
+                        }
+                    ]
+                }
+            }
+        });
+
+    $('#form9')
+        .form({
+            on: 'blur',
+            fields: {
+                minCount: {
+                    identifier  : 'minCount',
+                    rules: [
+                        {
+                            type   : 'minCount[2]',
+                            prompt : 'Please select at least 2 values'
+                        }
+                    ]
+                },
+                maxCount: {
+                    identifier  : 'maxCount',
+                    rules: [
+                        {
+                            type   : 'maxCount[2]',
+                            prompt : 'Please select a max of 2 values'
+                        }
+                    ]
+                },
+                exactCount: {
+                    identifier  : 'exactCount',
+                    rules: [
+                        {
+                            type   : 'exactCount[2]',
+                            prompt : 'Please select 2 values'
+                        }
+                    ]
+                }
+            }
+        });
+</script>

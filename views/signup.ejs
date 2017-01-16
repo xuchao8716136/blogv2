@@ -1,0 +1,118 @@
+<%- include header.ejs %>
+<div class="ui grid centered container ">
+
+    <form method="post" class="ui form segment ten wide tablet eight wide computer  fourteen wide moblie column" enctype="multipart/form-data" id="signup">
+        <h3 class="ui header"><i class="add user icon"></i>注册</h3>
+        <div class="two fields">
+            <div class="field required">
+                <label><i class="user icon"></i>用户名</label>
+                <input placeholder="用户名" name="name" type="text">
+            </div>
+            <div class="field required">
+                <label><i class="man icon"></i>性别</label>
+                <select class="ui dropdown" name="gender">
+                    <option value="">性别</option>
+                    <option value="m">男性</option>
+                    <option value="f">女性</option>
+                    <option value="x">保密</option>
+                </select>
+            </div>
+        </div>
+        <div class="two fields">
+            <div class="field required">
+                <label><i class="lock icon"></i>密码</label>
+                <input name="password" type="password" value="" placeholder="密码">
+            </div>
+            <div class="field required">
+                <label><i class="protect icon"></i>确认密码</label>
+                <input name="repassword" type="password" value="" placeholder="确认密码">
+            </div>
+        </div>
+        <div class="field required">
+            <label><i class="cloud upload icon"></i>头像</label>
+            <input type="file" name="avatar">
+        </div>
+        <div class="field required">
+            <label><i class="idea icon"></i>自我简介</label>
+            <textarea name="bio" cols="5" placeholder="不超过200字"></textarea>
+        </div>
+        <div class="inline field">
+            <div class="ui checkbox">
+                <input type="checkbox" name="terms">
+                <label>我同意以上协议</label>
+            </div>
+        </div>
+        <div class="ui primary submit button"><i class="mouse pointer icon"></i>提交</div>
+
+    </form>
+    <script>
+        $('#signup')
+            .form({
+                on: 'change',
+                inline: 'true',
+                duration: 400,
+                fields: {
+                    name: {
+                        identifier: 'name',
+                        rules: [
+                            {
+                                type: 'empty',
+                                prompt: '用户名不能为空'
+                            },
+                            {
+                                type: 'regExp[/^[a-z0-9_-]{4,16}$/]',
+                                prompt: '用户名应该在4-16个字符'
+                            }
+                        ]
+                    },
+                    gender: {
+                        identifier: 'gender',
+                        rules: [{
+                            type: 'empty',
+                            prompt: '请选择性别'
+                        }]
+                    },
+                    password: {
+                        identifier: 'password',
+                        rules: [
+                            {
+                                type: 'empty',
+                                prompt: '密码不能为空'
+                            },
+                            {
+                                type: 'maxLength[20]',
+                                prompt: '密码不得超过20个字符'
+                            },
+                            {
+                                type: 'minLength[6]',
+                                prompt: '密码不得小于6个字符'
+                            }
+                        ]
+                    },
+                    match: {
+                        identifier: 'repassword',
+                        rules: [
+                            {
+                                type: 'match[password]',
+                                prompt: '密码确认错误'
+                            }
+                        ]
+                    },
+                    bio: {
+                        identifier: 'bio',
+                        rules: [
+                            {
+                                type: 'maxLength[100]',
+                                prompt: '最多不超过100个字符'
+                            },
+                            {
+                                type: 'minLength[5]',
+                                prompt: '最多不超过100个字符'
+                            }
+                        ]
+                    },
+                }
+            })
+    </script>
+</div>
+<%- include footer.ejs %>
