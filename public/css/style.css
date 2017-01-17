@@ -12,4 +12,8 @@ h5 {
 .ui .button {
   font-family: "MicrosoftJhengHei", Microsoft Yahei, "Microsoft YaHei", STHeiti, MingLiu, sans-serif; }
 
+img {
+  height: 80px;
+  width: 80px; }
+
 /*# sourceMappingURL=style.css.map */
