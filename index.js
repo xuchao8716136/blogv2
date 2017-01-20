@@ -8,6 +8,9 @@ let config = require('config-lite');
 let routes = require('./routes');
 let pkg = require('./package');
 
+let winston = require('winston');
+let expressWinston = require('express-winston');
+
 let app = express();
 
 app.set('views',path.join(__dirname, 'views'));
@@ -44,9 +47,37 @@ app.use((req, res, next) => {
     res.locals.error = req.flash('error').toString();
     next();
 });
+app.use(expressWinston.logger({
+    transports: [
+        new (winston.transports.Console)({
+            json:true,
+            colorize:true
+        }),
+        new winston.transports.File({
+            filename: 'logs/success.log'
+        })
+    ]
+}));
 
 routes(app);
 
-app.listen(config.port,  () => {
-    console.log(`${pkg.name} listening on port ${config.port}`);
+app.use(expressWinston.errorLogger({
+    transports: [
+        new winston.transports.Console({
+        json:true,
+        colorize:true
+    })]
+}));
+app.use( (err, req, res, next) => {
+    res.render('error', {
+        error: err
+    });
 });
+
+if(module.parent) {
+    module.exports = app;
+} else {
+    app.listen(config.port,  () => {
+        console.log(`${pkg.name} listening on port ${config.port}`);
+    });
+}

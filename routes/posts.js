@@ -56,7 +56,7 @@ router.post('/', checkLogin, (req, res, next) => {
 });
 
 router.get('/:postId', (req, res, next) => {
-    let postId = req.params.postId;
+    const postId = req.params.postId;
 
     Promise.all([
         PostModel.getPostById(postId),

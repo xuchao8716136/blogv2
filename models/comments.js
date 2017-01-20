@@ -21,7 +21,7 @@ module.exports = {
     delCommentsByPostId:  (postId) => {
         return Comment.remove({ postId: postId }).exec();
     },
-    getComments:  (postId) => {
+    getComments: (postId) => {
         return Comment
             .find({ postId: postId })
             .populate({ path: 'author', model: 'User' })
